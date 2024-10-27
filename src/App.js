@@ -1,25 +1,32 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './MyComponents/Navbar';
+import Home from './MyComponents/Home';
+import News from './MyComponents/News';
+import TextUtils from './MyComponents/TextUtils';
 
 function App() {
+  const [switchTab, setSwTab] = useState("Home");
+  const [toggleDark, setToggleDark] = useState("light");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Navbar currentTab = {setSwTab} toggleDark={toggleDark} setToggleDark={setToggleDark}/>
       </header>
+
+      {/* {prompt("What is your name")} */}
+      
+      <div className='backg'>
+        {switchTab==="Home" && <Home color={toggleDark}/>}  
+        {switchTab==="TextUtils" && <TextUtils color={toggleDark}/>}  
+        {switchTab==="News" && <News color={toggleDark}/>}
+      </div>
+      
     </div>
   );
 }
+
 
 export default App;
