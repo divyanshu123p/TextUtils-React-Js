@@ -1,6 +1,8 @@
+import darkmodeicon from "../assets/dark-mode.png"
+
 const Navbar = ({currentTab, toggleDark, setToggleDark}) => {
   const toggle = () => {
-    console.log("img clicked");
+    // console.log("img clicked");
     if(toggleDark==="dark") setToggleDark("light");
     else setToggleDark("dark");
     return;
@@ -13,7 +15,7 @@ const Navbar = ({currentTab, toggleDark, setToggleDark}) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <button className="nav-link" onClick = {() => currentTab("Home")}>Home<span className="sr-only">(current)</span></button>
+                <button className="nav-link" onClick = {() => currentTab("TextUtils")}>Home<span className="sr-only">(current)</span></button>
               </li>
               <li className="nav-item">
                 <button className="nav-link" onClick = {() => currentTab("News")}>News</button>
@@ -30,14 +32,10 @@ const Navbar = ({currentTab, toggleDark, setToggleDark}) => {
                 </div>
               </li> */}
               <li className="nav-item">
-                <button className="nav-link" onClick={() => currentTab("TextUtils")}>TextUtils</button>
+                <button className="nav-link" onClick={() => currentTab("Home")}>Other</button>
               </li>
             </ul>
-            <img src="./dark-mode.png" onClick={()=>toggle()} alt="icon_missing" style={{height: '30px', width: 'auto', borderRadius: '5px', margin: '10px', filter: 'invert(100%)'}}/>
-            <form className="form-inline my-2 my-lg-0">
-              {/* <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> */}
-              {/* <button className="btn btn-outline-success my-2 my-sm-0" type="submit" style = {{margin: '10px'}}>Search</button> */}
-            </form>
+            <img src={darkmodeicon} onClick={()=>toggle()} alt="icon_missing" style={{height: '30px', width: 'auto', borderRadius: '5px', margin: '10px', filter: 'invert(100%)'}}/>
           </div>
         </nav>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Navbar from './MyComponents/Navbar';
 import Home from './MyComponents/Home';
@@ -7,7 +7,7 @@ import News from './MyComponents/News';
 import TextUtils from './MyComponents/TextUtils';
 
 function App() {
-  const [switchTab, setSwTab] = useState("Home");
+  const [switchTab, setSwTab] = useState("TextUtils");
   const [toggleDark, setToggleDark] = useState("light");
 
   return (

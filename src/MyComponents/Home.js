@@ -15,8 +15,8 @@ export default function Home({color}) {
                         <img src= {item.Location} className="card-img-top" alt="ET" style={{ width: '100%', height: '220px', padding: '5px' }}/>
                         <div className="card-body">
                             <h5 className="card-title">{item.ItemName}</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <button type='button' className="btn btn-primary" onClick={() => window.alert("Pareshan mat kar")}>Go somewhere</button>
+                            {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+                            <button type='button' className="btn btn-primary" onClick={() => {alert("Link invalid")}}>Download</button>
                         </div>
                     </div>        
             ))
