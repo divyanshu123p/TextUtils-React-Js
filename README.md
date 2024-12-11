@@ -1,3 +1,10 @@
+----------------------------
+![Front Page](front_page.jpeg)
+Front Page
+----------------------
+![News Page](front_page2.jpeg)
+New Ad Posting
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
